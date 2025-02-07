@@ -34,6 +34,10 @@ public class RegionRestController {
         return lstRegioner;
     }
 
+    @GetMapping("/regioner")
+    public List<Region> getAllRegioner(){
+        return regionRepository.findAll();
+    }
 
     @DeleteMapping("/region/{id}")
     public ResponseEntity<String> deleteRegion(@PathVariable("id") String id){
